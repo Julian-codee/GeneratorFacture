@@ -7,7 +7,6 @@ public class cliente {
 
     //Getter and setters
 
-
     public String getNombre() {
         return Nombre;
     }
