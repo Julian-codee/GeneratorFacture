@@ -30,6 +30,13 @@ public class Main {
 
         factura factura = new factura(descripcion, cliente);
 
+        System.out.println();
+
+        //Bucle para generar la cantidad de productos a ingresar
+
+        for (int i = 0; i < 5; i++) {
+            producto producto = new producto();
+
 
     }
 }
