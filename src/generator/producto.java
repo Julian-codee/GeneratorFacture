@@ -5,29 +5,22 @@ public class producto {
     private String nombre;
     private double precio;
 
+    //Private class ultimo codigo
+    private static int ultimoCodigo = 0;
 
-    private static int ultimoCodigo;
-
-    public producto(String nombre , double precio){
-    ultimoCodigo++;
-    this.codigo = "P" + String.format("%05d, ultimoCodigo");
-    this.nombre = nombre;
-    this.precio = precio;
+    //Constructor
+    public producto() {
+        ultimoCodigo++;
+        this.codigo = "P" + String.format("%05d", ultimoCodigo);
+        this.nombre = nombre;
+        this.precio = precio;
     }
 
     //Getters and setters
 
-    //codigo
-
     public String getCodigo() {
         return codigo;
     }
-
-    public void setCodigo(String codigo) {
-        this.codigo = codigo;
-    }
-
-    //Nombre
 
     public String getNombre() {
         return nombre;
@@ -37,8 +30,6 @@ public class producto {
         this.nombre = nombre;
     }
 
-    //Precio
-
     public double getPrecio() {
         return precio;
     }
@@ -47,12 +38,10 @@ public class producto {
         this.precio = precio;
     }
 
-    //* Devuelve una representación en cadena del producto.
+    //Retorna la informacion
 
     @Override
     public String toString() {
-        return codigo +
-                "\t" + nombre +
-                "\t" + precio;
+        return codigo + "\t" + nombre + "\t" + precio;
     }
 }
