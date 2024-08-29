@@ -37,6 +37,32 @@ public class Main {
         for (int i = 0; i < 5; i++) {
             producto producto = new producto();
 
+            //Informacion del producto
 
+            // Código del producto asignado automáticamente en el constructor de Producto
+
+            System.out.print("Ingrese el nombre del producto nº " + (i + 1) + ": ");
+            producto.setNombre(scanner.nextLine());
+
+            //Imprime el precio del producto
+
+            System.out.print("Ingrese el precio del producto: ");
+            producto.setPrecio(scanner.nextFloat());
+
+            //Imprime La cantidad del producto
+
+            System.out.print("Ingrese la cantidad: ");
+            int cantidad = scanner.nextInt();
+
+
+            // Se pasa el producto y la cantidad en el orden correcto al constructor de ItemFactura
+
+            factura.addItemFactura(new itemFactura(producto, cantidad));
+
+            System.out.println();
+            scanner.nextLine();
+        }
+
+        System.out.println(factura);
     }
 }
