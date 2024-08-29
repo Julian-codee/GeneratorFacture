@@ -10,6 +10,14 @@ public class Main {
         cliente cliente = new cliente();
         Scanner scanner = new Scanner(System.in);
 
+        //Informacion del cliente
+
+        System.out.print("Ingrese el Nombre del Cliente: ");
+        cliente.setNombre(scanner.nextLine());
+
+        System.out.print("Ingrese el Nif del Cliente: ");
+        cliente.setNif(scanner.nextLine());
+
 
     }
 }
